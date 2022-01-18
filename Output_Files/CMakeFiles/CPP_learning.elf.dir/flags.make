@@ -6,5 +6,5 @@ CXX_FLAGS = -Wreorder -std=c++17 -fno-rtti -fno-exceptions
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/c11192/Aruns_Workspace/Programming_Language/CPP_Learning/Cmake_tutorial/Includes 
+CXX_INCLUDES = -I/home/arun/Programming/CPP/CPP_CMAKE/Includes 
 

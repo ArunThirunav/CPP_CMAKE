@@ -1,4 +1,4 @@
-# Install script for directory: /home/c11192/Aruns_Workspace/Programming_Language/CPP_Learning/Cmake_tutorial
+# Install script for directory: /home/arun/Programming/CPP/CPP_CMAKE
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/c11192/Aruns_Workspace/Programming_Language/CPP_Learning/Cmake_tutorial/Output_Files/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/arun/Programming/CPP/CPP_CMAKE/Output_Files/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
