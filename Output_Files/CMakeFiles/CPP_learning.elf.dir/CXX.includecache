@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../Includes/binarySearch.hpp
+array
+-
+stdint.h
+../Includes/stdint.h
+
+/home/c11192/Aruns_Workspace/Programming_Language/CPP_Learning/Cmake_tutorial/Source/binarySearch.cpp
+binarySearch.hpp
+/home/c11192/Aruns_Workspace/Programming_Language/CPP_Learning/Cmake_tutorial/Source/binarySearch.hpp
+
+/home/c11192/Aruns_Workspace/Programming_Language/CPP_Learning/Cmake_tutorial/main.cpp
+array
+-
+iostream
+-
+binarySearch.hpp
+/home/c11192/Aruns_Workspace/Programming_Language/CPP_Learning/Cmake_tutorial/binarySearch.hpp
+

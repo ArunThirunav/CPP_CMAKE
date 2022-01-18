@@ -1,13 +1,12 @@
+
+#include <array>
 #include <iostream>
-#include "first.hpp"
-#include "second.hpp"
+#include "binarySearch.hpp"
 
-first objFirst;
-second objSecond;
-
+binarySearch<int32_t, 5> objBinarySearch;
 int main(){
-    std::cout << "Hello World" << std::endl;
-    objFirst.printFunc();
-    objSecond.printFunc();
+    int32_t l_index{0};
+    std::array<int32_t, 5L> l_arr{1, 2, 5, 78, 94};
+    l_index = objBinarySearch.Get_Index(l_arr);
     return 0;
 }

@@ -12,9 +12,9 @@ FOREACH (SRC_EACH_FILE ${USER_SOURCES})
     message(${SRC_EACH_FILE})
 ENDFOREACH()
 
-# header file directory path in the project
+# header file directory path in the project 
 INCLUDE_DIRECTORIES(${INC_PATH})
-
+SET(CMAKE_C_FLAGS " -std=gnu11 " CACHE INTERNAL "c compiler flags")
+SET(CMAKE_CXX_FLAGS "-Wreorder -std=c++17 -fno-rtti -fno-exceptions  " CACHE INTERNAL "cxx compiler flags")
 # output file if needed add .elf/.out to the name
-add_executable(${PROJECT_NAME} main.cpp ${USER_SOURCES})
-
+add_executable(${PROJECT_NAME}.elf main.cpp ${USER_SOURCES})

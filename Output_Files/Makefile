@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/c11192/Aruns_Workspace/Programming_Language/CPP_Learnin
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,17 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named CPP_learning
+# Target rules for targets named CPP_learning.elf
 
 # Build rule for target.
-CPP_learning: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 CPP_learning
-.PHONY : CPP_learning
+CPP_learning.elf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CPP_learning.elf
+.PHONY : CPP_learning.elf
 
 # fast build rule for target.
-CPP_learning/fast:
-	$(MAKE) -f CMakeFiles/CPP_learning.dir/build.make CMakeFiles/CPP_learning.dir/build
-.PHONY : CPP_learning/fast
+CPP_learning.elf/fast:
+	$(MAKE) -f CMakeFiles/CPP_learning.elf.dir/build.make CMakeFiles/CPP_learning.elf.dir/build
+.PHONY : CPP_learning.elf/fast
+
+Source/binarySearch.o: Source/binarySearch.cpp.o
+
+.PHONY : Source/binarySearch.o
+
+# target to build an object file
+Source/binarySearch.cpp.o:
+	$(MAKE) -f CMakeFiles/CPP_learning.elf.dir/build.make CMakeFiles/CPP_learning.elf.dir/Source/binarySearch.cpp.o
+.PHONY : Source/binarySearch.cpp.o
+
+Source/binarySearch.i: Source/binarySearch.cpp.i
+
+.PHONY : Source/binarySearch.i
+
+# target to preprocess a source file
+Source/binarySearch.cpp.i:
+	$(MAKE) -f CMakeFiles/CPP_learning.elf.dir/build.make CMakeFiles/CPP_learning.elf.dir/Source/binarySearch.cpp.i
+.PHONY : Source/binarySearch.cpp.i
+
+Source/binarySearch.s: Source/binarySearch.cpp.s
+
+.PHONY : Source/binarySearch.s
+
+# target to generate assembly for a file
+Source/binarySearch.cpp.s:
+	$(MAKE) -f CMakeFiles/CPP_learning.elf.dir/build.make CMakeFiles/CPP_learning.elf.dir/Source/binarySearch.cpp.s
+.PHONY : Source/binarySearch.cpp.s
 
 Source/first.o: Source/first.cpp.o
 
@@ -129,7 +156,7 @@ Source/first.o: Source/first.cpp.o
 
 # target to build an object file
 Source/first.cpp.o:
-	$(MAKE) -f CMakeFiles/CPP_learning.dir/build.make CMakeFiles/CPP_learning.dir/Source/first.cpp.o
+	$(MAKE) -f CMakeFiles/CPP_learning.elf.dir/build.make CMakeFiles/CPP_learning.elf.dir/Source/first.cpp.o
 .PHONY : Source/first.cpp.o
 
 Source/first.i: Source/first.cpp.i
@@ -138,7 +165,7 @@ Source/first.i: Source/first.cpp.i
 
 # target to preprocess a source file
 Source/first.cpp.i:
-	$(MAKE) -f CMakeFiles/CPP_learning.dir/build.make CMakeFiles/CPP_learning.dir/Source/first.cpp.i
+	$(MAKE) -f CMakeFiles/CPP_learning.elf.dir/build.make CMakeFiles/CPP_learning.elf.dir/Source/first.cpp.i
 .PHONY : Source/first.cpp.i
 
 Source/first.s: Source/first.cpp.s
@@ -147,7 +174,7 @@ Source/first.s: Source/first.cpp.s
 
 # target to generate assembly for a file
 Source/first.cpp.s:
-	$(MAKE) -f CMakeFiles/CPP_learning.dir/build.make CMakeFiles/CPP_learning.dir/Source/first.cpp.s
+	$(MAKE) -f CMakeFiles/CPP_learning.elf.dir/build.make CMakeFiles/CPP_learning.elf.dir/Source/first.cpp.s
 .PHONY : Source/first.cpp.s
 
 Source/second.o: Source/second.cpp.o
@@ -156,7 +183,7 @@ Source/second.o: Source/second.cpp.o
 
 # target to build an object file
 Source/second.cpp.o:
-	$(MAKE) -f CMakeFiles/CPP_learning.dir/build.make CMakeFiles/CPP_learning.dir/Source/second.cpp.o
+	$(MAKE) -f CMakeFiles/CPP_learning.elf.dir/build.make CMakeFiles/CPP_learning.elf.dir/Source/second.cpp.o
 .PHONY : Source/second.cpp.o
 
 Source/second.i: Source/second.cpp.i
@@ -165,7 +192,7 @@ Source/second.i: Source/second.cpp.i
 
 # target to preprocess a source file
 Source/second.cpp.i:
-	$(MAKE) -f CMakeFiles/CPP_learning.dir/build.make CMakeFiles/CPP_learning.dir/Source/second.cpp.i
+	$(MAKE) -f CMakeFiles/CPP_learning.elf.dir/build.make CMakeFiles/CPP_learning.elf.dir/Source/second.cpp.i
 .PHONY : Source/second.cpp.i
 
 Source/second.s: Source/second.cpp.s
@@ -174,7 +201,7 @@ Source/second.s: Source/second.cpp.s
 
 # target to generate assembly for a file
 Source/second.cpp.s:
-	$(MAKE) -f CMakeFiles/CPP_learning.dir/build.make CMakeFiles/CPP_learning.dir/Source/second.cpp.s
+	$(MAKE) -f CMakeFiles/CPP_learning.elf.dir/build.make CMakeFiles/CPP_learning.elf.dir/Source/second.cpp.s
 .PHONY : Source/second.cpp.s
 
 main.o: main.cpp.o
@@ -183,7 +210,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/CPP_learning.dir/build.make CMakeFiles/CPP_learning.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/CPP_learning.elf.dir/build.make CMakeFiles/CPP_learning.elf.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -192,7 +219,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/CPP_learning.dir/build.make CMakeFiles/CPP_learning.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/CPP_learning.elf.dir/build.make CMakeFiles/CPP_learning.elf.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -201,7 +228,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/CPP_learning.dir/build.make CMakeFiles/CPP_learning.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/CPP_learning.elf.dir/build.make CMakeFiles/CPP_learning.elf.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -210,9 +237,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... CPP_learning"
+	@echo "... edit_cache"
+	@echo "... CPP_learning.elf"
+	@echo "... Source/binarySearch.o"
+	@echo "... Source/binarySearch.i"
+	@echo "... Source/binarySearch.s"
 	@echo "... Source/first.o"
 	@echo "... Source/first.i"
 	@echo "... Source/first.s"

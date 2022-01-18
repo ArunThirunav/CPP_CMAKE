@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wreorder -std=c++17 -fno-rtti -fno-exceptions    -rdynamic CMakeFiles/CPP_learning.elf.dir/main.cpp.o CMakeFiles/CPP_learning.elf.dir/Source/binarySearch.cpp.o CMakeFiles/CPP_learning.elf.dir/Source/first.cpp.o CMakeFiles/CPP_learning.elf.dir/Source/second.cpp.o  -o CPP_learning.elf 
